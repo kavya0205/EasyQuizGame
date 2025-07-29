@@ -1,0 +1,128 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --bgclr: #021526;
+    --boxbgclr: #03346E;
+    --fontclr: #6EACDA;
+    --fontclr2: #E2E2B6;
+}
+body {
+    background-color: var(--bgclr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.screen p {
+    color: var(--fontclr);
+}
+.container {
+    width: 450px;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    color: var(--fontclr2);
+    text-align: center;
+    box-shadow: 0px 0px 20px var(--fontclr2);
+}
+.screen {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+}
+.screen h1 {
+    margin: 1rem;
+}
+.screen p {
+    margin: 1rem;
+}
+#start-screen {
+    padding: 1rem;
+}
+.active {
+    display: block;
+}
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.answer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.answer-btn {
+    color: #E2E2B6;
+    background-color: #03346E;
+    padding: 0.2rem;
+    padding-left: 10px;
+    border: 1px solid #03346E;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+.answer-btn:hover {
+    background-color: #021526;
+    border: 1px solid #E2E2B6;
+    transform: scale(105%);
+    transition: all 0.2s ease;
+}
+.answer-btn.correct {
+    background-color: #41ecb3;
+    color: black;
+    border: 1px solid #71ecc3;
+}
+.answer-btn.incorrect {
+    background-color: #ec5541;
+    color: black;
+    border: 1px solid #ec8371;
+}
+.btn {
+    font-size: 18px;
+    min-height: 40px;
+    width: 24vmin;
+    background-color: var(--fontclr2);
+    color: var(--bgclr);
+    border: 0px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--bgclr);
+    color: var(--fontclr2);
+    border: 2px solid var(--fontclr2);
+    transform: scale(105%);
+    transition: all 0.3s ease-in-out;
+}
+.progress-bar {
+    height: 10px;
+    overflow: hidden;
+    background-color: #E2E2B6;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #03346E;
+    transition: width 0.3s ease;
+}
+@media screen and (max-width: 500px) {
+    .container{
+        /* height: 40vh; */
+        width: 60vw;
+    }
+    .screen h1 {
+        font-size: 2rem;
+    }
+    .screen {
+        padding: 0.2rem;
+    }
+}
